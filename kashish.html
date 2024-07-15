@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .gallery-container {
+            text-align: center; /* Center align the heading and gallery */
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px; /* Add margin for better spacing */
+        }
+        .gallery-heading {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333; /* Dark gray color */
+            text-transform: uppercase; /* Convert text to uppercase */
+            letter-spacing: 2px; /* Add letter spacing */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Text shadow */
+            background-color: #fff; /* White background */
+            padding: 10px 20px; /* Padding around text */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+            display: inline-block; /* Ensure inline display */
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three images per row */
+            gap: 30px; /* Increased spacing */
+        }
+        .gallery-item {
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative; /* Ensure relative positioning for child elements */
+            transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+        }
+        .gallery-item:hover {
+            transform: scale(1.1); /* Zoom in effect on hover */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px 8px 0 0; /* Rounded corners only at the top */
+        }
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 8px;
+            font-size: 14px;
+            transition: opacity 0.3s ease-in-out; /* Smooth transition for caption */
+            opacity: 0; /* Initially hidden */
+        }
+        .gallery-item:hover .caption {
+            opacity: 1; /* Show caption on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1 class="gallery-heading">BITCRAFT</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/b6/6f/45/b66f459aae110f8998693060568e8803.jpg" alt="Image 1">
+                <div class="caption">Elegant</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/6a/d7/af/6ad7af0ef2c48d5852277d18b9cc96cf.jpg" alt="Image 2">
+                <div class="caption">Casual</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/e7/0a/e9/e70ae916a08698fec289b400b1fbe43d.jpg" alt="Image 3">
+                <div class="caption">Chic</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/5e/68/d6/5e68d6c7e1f94def6978a7098c17f4a9.jpg" alt="Image 4">
+                <div class="caption">Sporty</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/09/07/a5/0907a566c08e3b1c14ec3ab3a90ea0ec.jpg" alt="Image 5">
+                <div class="caption">Formal</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/d9/2e/3e/d92e3e4b3d3b2107c6333b82dbaaab90.jpg" alt="Image 6">
+                <div class="caption">Vintage</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/d4/92/1d/d4921ddd9aa3e66f5e39b4ad8966f788.jpg" alt="Image 7">
+                <div class="caption">Modern</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/cb/55/61/cb5561c411e513e673c7ef53ae03feaa.jpg" alt="Image 8">
+                <div class="caption">Edgy</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/2c/16/2d/2c162d2164677ad21d5e4e7a0591d908.jpg" alt="Image 9">
+                <div class="caption">Bohemian</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/0d/96/71/0d96717a3852e17f74d5ea44aeb76e2e.jpg" alt="Image 10">
+                <div class="caption">Minimalist</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
